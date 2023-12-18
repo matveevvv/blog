@@ -1,10 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Блог{% endblock %}
 
 {% block body %}
 
 <div class="example-wrapper">
+    <a href="{{ path('app_article_new') }}" class="btn btn-default">Создать статью</a>
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <button class="btn bnt-primary">Найти</button>
+    {{ form_end(form) }}
+
     {%for article in articles %}
         <article>
             <h2>{{ article.title }}</h2>
@@ -13,6 +19,7 @@
             </div>
             <div>
                 Дата создания: {{ article.createdAt|date('d.m.Y H:i:s') }}
+                Автор:{{ article.author }}
             </div>
         </article>
     {% endfor %}

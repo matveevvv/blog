@@ -9,7 +9,7 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Titile</th>
+                <th>Title</th>
                 <th>Body</th>
                 <th>CreatedAt</th>
                 <th>actions</th>
@@ -19,12 +19,12 @@
         {% for article in articles %}
             <tr>
                 <td>{{ article.id }}</td>
-                <td>{{ article.titile }}</td>
+                <td>{{ article.title }}</td>
                 <td>{{ article.body }}</td>
                 <td>{{ article.createdAt ? article.createdAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
-                    <a href="{{ path('app_article_show', {'id': article.id}) }}">show</a>
-                    <a href="{{ path('app_article_edit', {'id': article.id}) }}">edit</a>
+                    <a href="{{ path('app_article_show', {'id': article.id}) }}">Показать</a>
+                    <a href="{{ path('app_article_edit', {'id': article.id}) }}">Редактировать</a>
                 </td>
             </tr>
         {% else %}
@@ -35,5 +35,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('app_article_new') }}">Create new</a>
+    <a href="{{ path('app_article_new') }}">Создать новую</a>
 {% endblock %}

@@ -15,7 +15,7 @@ class Article
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $titile = null;
+    private ?string $title = null;
 
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $body = null;
@@ -32,14 +32,14 @@ class Article
         return $this->id;
     }
 
-    public function getTitile(): ?string
+    public function getTitle(): ?string
     {
-        return $this->titile;
+        return $this->title;
     }
 
-    public function setTitile(string $titile): static
+    public function setTitle(string $title): static
     {
-        $this->titile = $titile;
+        $this->title = $title;
 
         return $this;
     }
@@ -79,4 +79,10 @@ class Article
 
         return $this;
     }
+
+    public function  __toString(): string
+    {
+        return $this->title;
+    }
+
 }
