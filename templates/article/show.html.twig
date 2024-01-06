@@ -3,24 +3,24 @@
 {% block title %}Article{% endblock %}
 
 {% block body %}
-    <h1>Article</h1>
+    <h1>Статья</h1>
 
     <table class="table">
         <tbody>
             <tr>
-                <th>Id</th>
+                <th>Уникальный номер</th>
                 <td>{{ article.id }}</td>
             </tr>
             <tr>
-                <th>Title</th>
+                <th>Заголовок</th>
                 <td>{{ article.title }}</td>
             </tr>
             <tr>
-                <th>Body</th>
+                <th>Текст</th>
                 <td>{{ article.body }}</td>
             </tr>
             <tr>
-                <th>CreatedAt</th>
+                <th>Дата создания</th>
                 <td>{{ article.createdAt ? article.createdAt|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
         </tbody>
