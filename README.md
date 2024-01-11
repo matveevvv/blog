@@ -28,7 +28,7 @@ Symfony Blog – это мощный блог с разнообразными ф
 ## Установка
 
 1. Склонируйте репозиторий: `git clone https://github.com/matveevvv/symfony-blog.git`
-2. Создайте файл `.env` в корне проекта и скопируйте в него содержимое файла `.env.example`. При необходимости настройте параметры для работы с PostgreSQL.
+2. Создайте файл `.env.local` в корне проекта и скопируйте в него содержимое файла `.env.example`. При необходимости настройте параметры для работы с PostgreSQL.
 3. Запустите контейнеры Docker: `docker-compose up -d`
 4. Установите зависимости через Composer: `docker-compose exec php composer install`
 5. Примените миграции для базы данных: `docker-compose exec php bin/console doctrine:migrations:migrate`
