@@ -32,7 +32,7 @@ Symfony Blog – это мощный блог с разнообразными ф
 3. Запустите контейнеры Docker: `docker-compose up -d`
 4. Установите зависимости через Composer: `docker-compose exec php composer install`
 5. Примените миграции для базы данных: `docker-compose exec php bin/console doctrine:migrations:migrate`
-6. Запустите веб-сервер: `docker-compose exec php bin/console server:run`
+6. Запустите веб-сервер: `Symfony server:start`
 
 ## Доступ к приложению
 
